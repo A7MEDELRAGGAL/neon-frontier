@@ -4,8 +4,8 @@
 
 - Account: `A7MEDELRAGGAL`
 - Track: `Developer Tools & Open Source`
-- Repository: **to be filled after the first public push**
-- Live URL: **to be filled after GitHub Pages is enabled**
+- Repository: https://github.com/A7MEDELRAGGAL/neon-frontier
+- Live URL: https://a7medelraggal.github.io/neon-frontier/ (pending Pages deployment)
 - Demo video: **to be filled after recording/upload**
 
 ## OmniRush sessions
