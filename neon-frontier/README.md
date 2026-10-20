@@ -1,6 +1,6 @@
 # Neon Frontier
 
-Neon Frontier is a no-install, original browser FPS sandbox made with plain HTML, CSS, JavaScript, and the browser WebGL API. It uses procedural geometry and color only: there are no downloaded packages, external URLs, image files, or third-party assets.
+Neon Frontier is a no-install, original browser Battle Royale sandbox made with plain HTML, CSS, JavaScript, and the browser WebGL API. It uses procedural geometry and color only: there are no downloaded packages, external URLs, image files, or third-party assets.
 
 ## Run
 
@@ -12,9 +12,11 @@ Open `index.html` directly in a current desktop browser. A local static server i
 - WASD movement, sprint (Shift), crouch (Ctrl/C), jump (Space), mouse fire, reload (R), weapon switching (1/2/3 or mouse wheel), and pause/resume.
 - Three weapons with distinct damage, fire rate, magazine, reserve, reload, spread, range, and pellet behavior.
 - Reflex, Capacitor, and Stabilizer attachment toggles alter weapon behavior and persist with loadout settings.
-- Sentry bots chase around cover, check line of sight, attack at range, and use elite variants in escalating waves.
-- Wave progression, score, health, reload feedback, damage feedback, and a local high-score record.
-- `localStorage` save/load for sensitivity, selected weapon, attachment choices, and high score.
+- Three readable procedural enemy archetypes spawn in rotating wave compositions: balanced Strikers, fast low-health Skirmishers, and slow armored Bulwarks with different silhouettes, accessories, movement, range, damage, and cooldown tuning. Veteran contacts are mixed into each escalating wave.
+- Enemy radio cues, layered footsteps/voice/attack/death sounds, readable archetype movement/combat animations, short-lived recoil/trail/impact particles, attack beams, death bursts, wave composition toasts, and minimap colors are synthesized at runtime with WebAudio and canvas/WebGL primitives.
+- A shrinking safe ring, 11 autonomous rivals, loot pickups, shields, medkits, eliminations, victory/elimination results, and a local high-score record.
+- Four original cosmetic skins and persistent `localStorage` save/load for sensitivity, selected weapon, attachment choices, selected skin, last result, and high score.
+- An optional local WebSocket fireteam panel when the app is run through `npm start`.
 
 ## Controls
 
@@ -36,7 +38,7 @@ Open `index.html` directly in a current desktop browser. A local static server i
 2. Open **Configure Loadout**, select each weapon, toggle each attachment, change sensitivity, close the panel, reopen it, and confirm selections persist.
 3. Start a mission. Confirm pointer lock, mouse look, WASD movement, sprint/crouch/jump, minimap, wave HUD, and weapon readout.
 4. Fire until a magazine empties, press `R`, switch weapons with `1/2/3`, and verify ammo/reload feedback changes.
-5. Shoot bots and confirm hit markers, score changes, bot removal, wave clear, and the next wave.
+5. Shoot each enemy silhouette and confirm hit markers, score changes, archetype-specific weapon-ready/recoil, agile fin/trail, or heavy stomp/armor-pulse feedback, layered radio/audio cues, short-lived impact/death bursts, bot removal, and the live-player count.
 6. Let a bot attack, confirm the damage flash and health bar, then press `Esc` and use Resume. Return to lobby and reopen the page to confirm the high score is saved.
 
 ## Verification

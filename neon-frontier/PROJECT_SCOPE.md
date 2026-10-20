@@ -13,16 +13,18 @@ This is a real interactive 3D project, not a Unity/Unreal project file. It has n
 - three original weapons with separate fire/reload/range/spread/pellet behavior
 - loadout selection and attachment modifiers
 - procedural arena map and tactical minimap
-- bots with pursuit, cover checks, line-of-sight attacks, elite variants, and wave progression
-- lobby, pause, resume, return-to-lobby, HUD, damage feedback, hit markers
-- local save for sensitivity, loadout, attachments, and high score
+- Battle Royale match with three procedural bot archetypes (Striker, Skirmisher, Bulwark), 11 rivals, loot, shields, medkits, eliminations, victory flow, and a closing safe ring
+- procedural WebAudio footsteps/voice/attack/death layers, per-bot movement/attack animation state, bounded recoil/trail/impact/death particles, attack beams, composition toasts, and archetype minimap markers
+- lobby, pause, resume, return-to-lobby, HUD, damage feedback, hit markers, loot, shields, medkits, and match results
+- local save for sensitivity, loadout, attachments, selected skin, last result, and high score
+- optional WebSocket fireteam connection to the Node server with room state and remote avatar rendering
 
 ## Deliberate non-goals for this slice
 
-- no multiplayer server or third-party networking SDK
+- no hosted multiplayer service; local/server deployment is required for WebSocket sessions
 - no commercial-game assets or reverse-engineered code
 - no Unity/Unreal editor files until the user explicitly provides or approves an installed engine
 
 ## Next expansion path without changing the no-install rule
 
-The next browser-only increments can add authored procedural rooms, weapon pickups, bot archetypes, objective modes, replayable seed selection, and a local profile screen. A true Unity/Unreal deliverable requires the corresponding editor/runtime to be available; installing one is intentionally not part of this scope.
+The next browser-only increments can add authored procedural rooms, weapon pickups, objective modes, replayable seed selection, and a local profile screen. A true Unity/Unreal deliverable requires the corresponding editor/runtime to be available; installing one is intentionally not part of this scope.
