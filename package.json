@@ -1,0 +1,14 @@
+{
+  "name": "neon-frontier",
+  "version": "1.0.0",
+  "private": true,
+  "description": "An original dependency-free browser FPS vertical slice.",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --check neon-frontier/game.js && node --check server.mjs && node tools/validate.mjs"
+  },
+  "engines": {
+    "node": "22.14.0"
+  }
+}

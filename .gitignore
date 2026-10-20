@@ -1,0 +1,23 @@
+# Installed game artifacts are analysis inputs, not submission source.
+CombatMaster.exe
+GameAssembly.dll
+UnityPlayer.dll
+baselib.dll
+CombatMaster_Data/
+D3D12/
+
+# Local development/runtime files.
+.env
+node_modules/
+*.log
+__pycache__/
+.pytest_cache/
+python_transfer_client/.venv/
+python_transfer_client/**/__pycache__/
+python_transfer_client/
+
+# OS/editor files.
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
