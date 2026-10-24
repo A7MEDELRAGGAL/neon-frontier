@@ -118,6 +118,7 @@ class RoomManager {
     return {
       type: "state",
       roomId: room.id,
+      hostId: room.hostId,
       tick: room.tick,
       phase: room.phase,
       match: {

@@ -51,10 +51,16 @@ try {
   const created = await waitFor(host, "room.created");
   assert.equal(created.room.id, "test-room");
   assert.equal(created.room.phase, "lobby");
+  assert.equal(created.room.hostId, hostWelcome.playerId);
 
   guest.socket.send(JSON.stringify({ type: "room.join", roomId: "test-room", playerName: "Guest" }));
   const joined = await waitFor(guest, "room.joined");
   assert.equal(joined.room.playerCount, 2);
+  assert.equal(joined.room.hostId, hostWelcome.playerId);
+
+  host.socket.send(JSON.stringify({ type: "player.ready", ready: true }));
+  const ready = await waitFor(guest, "player.ready", (message) => message.playerId === hostWelcome.playerId);
+  assert.equal(ready.ready, true);
 
   host.socket.send(JSON.stringify({ type: "match.start" }));
   await waitFor(host, "match.start");
@@ -62,6 +68,7 @@ try {
   const state = await waitFor(guest, "state", (message) =>
     message.phase === "running" && message.players.some((player) => player.name === "Guest" && player.inputSeq === 7));
   assert.equal(state.phase, "running");
+  assert.equal(state.hostId, hostWelcome.playerId);
   assert.equal(state.players.length, 2);
   assert.equal(state.players.find((player) => player.name === "Guest").inputSeq, 7);
 

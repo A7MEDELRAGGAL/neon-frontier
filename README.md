@@ -24,6 +24,7 @@ Neon Frontier is an original, dependency-light browser FPS vertical slice built 
 - Local `localStorage` save for sensitivity, selected weapon, attachments, and high score.
 - Battle Royale loop: 11 rivals, loot pickups, Aegis shields, medkits, a shrinking ring, eliminations, victory/elimination result screens, and original cosmetic skins.
 - Multiplayer foundation: a Node server keeps authoritative rooms and player movement over WebSocket; connected remote players are rendered as neon fireteam avatars.
+- Online lobby controls: connect, create/join a room, ready up, and let the room host start the synchronized match.
 
 ## Requirements
 
@@ -48,7 +49,8 @@ The same server exposes a WebSocket endpoint at `/ws` (for example,
 `ws://127.0.0.1:4173/ws`). A new connection receives `welcome` and `lobby`
 messages. Clients can create or join rooms with `room.create` and `room.join`,
 send bounded movement updates with `input`, and use `player.ready`,
-`match.start`, and `match.end` for a small lobby-to-match lifecycle. The server
+`match.start`, and `match.end` for a small lobby-to-match lifecycle; only the
+room host can start or end a match. The server
 publishes authoritative `state` snapshots, sends `match.start` / `match.end`
 events, handles ping/pong, and rate-limits input and client state messages.
 Client-authored `state` messages are rejected so future browser clients cannot
