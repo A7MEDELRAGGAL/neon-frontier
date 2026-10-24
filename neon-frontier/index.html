@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#081117">
-  <title>Neon Frontier // WebGL FPS</title>
+  <meta name="theme-color" content="#171817">
+  <title>Frontier Operations // Tactical FPS</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,15 +15,15 @@
 
     <section id="lobby" class="screen visible">
       <div class="brand-lockup">
-        <p class="eyebrow">ORBITAL TRAINING NETWORK // NODE 07</p>
-        <h1>NEON <span>FRONTIER</span></h1>
-        <p class="tagline">A procedural combat sandbox built for the browser.</p>
+        <p class="eyebrow">FIELD OPERATIONS // SECTOR 07</p>
+        <h1>FRONTIER <span>OPERATIONS</span></h1>
+        <p class="tagline">A grounded procedural tactical shooter built for the browser.</p>
       </div>
       <div class="lobby-grid">
         <div class="panel mission-panel">
           <div class="panel-kicker">MISSION BRIEF</div>
           <h2>Hold the frontier.</h2>
-          <p>Drop into a changing neon outpost, loot a weapon, and outlast autonomous rivals as the safe ring closes. Use cover, control your pace, and keep the charge cells hot.</p>
+          <p>Enter a contested training sector, secure equipment, and outlast hostile patrols as the perimeter closes. Use cover, control your pace, and keep your rifle ready.</p>
           <div class="stat-row"><span>PERSONAL BEST</span><strong id="bestScore">000000</strong></div>
           <div class="stat-row"><span>SIMULATION</span><strong>BATTLE ROYALE // SOLO</strong></div>
           <div class="stat-row"><span>LAST RUN</span><strong id="lastResult">READY TO DROP</strong></div>
@@ -31,9 +31,9 @@
         <div class="panel action-panel">
           <button id="startButton" class="primary-button">START MISSION <span>↵</span></button>
           <button id="lobbyLoadoutButton" class="ghost-button">CONFIGURE LOADOUT</button>
-           <div class="skin-picker"><div class="panel-kicker">FRONTIER SKIN</div><div id="skinOptions" class="skin-options"></div></div>
+           <div class="skin-picker"><div class="panel-kicker">FIELD FINISH</div><div id="skinOptions" class="skin-options"></div></div>
            <div class="online-panel">
-             <div class="panel-kicker">ONLINE FIRETEAM</div>
+              <div class="panel-kicker">ONLINE FIRETEAM</div>
              <div class="online-row"><input id="playerName" maxlength="24" placeholder="Callsign" value="Ranger"><input id="roomCode" maxlength="32" placeholder="Room code"><button id="connectButton" class="ghost-button">CONNECT</button></div>
               <div class="online-row"><button id="createRoomButton" class="ghost-button" disabled>CREATE ROOM</button><button id="joinRoomButton" class="ghost-button" disabled>JOIN ROOM</button><button id="readyButton" class="ghost-button" disabled>READY</button><button id="startRoomButton" class="ghost-button" disabled>START MATCH</button></div>
              <p id="onlineStatus" class="online-status">SOLO MODE // LOCAL MATCH</p>
@@ -41,7 +41,7 @@
            <div class="control-hint"><span>WASD / ARROWS</span> MOVE &nbsp; <span>SHIFT</span> SPRINT &nbsp; <span>SPACE</span> JUMP<br><span>MOUSE</span> AIM &nbsp; <span>LMB</span> FIRE &nbsp; <span>R</span> RELOAD &nbsp; <span>1—6</span> WEAPONS</div>
         </div>
       </div>
-      <p class="build-line">NO INSTALL // LOCAL PROCEDURAL GEOMETRY // BUILD 0.9.7</p>
+       <p class="build-line">NO INSTALL // PROCEDURAL FIELD SIMULATION // BUILD 1.0.0</p>
     </section>
 
     <section id="loadout" class="screen">
@@ -77,7 +77,7 @@
     </section>
 
     <div id="hud" class="hud" aria-live="polite">
-      <div class="hud-top"><div class="wave-readout"><span class="hud-label">MATCH STATUS</span><strong id="waveValue">DROP</strong><span id="waveState" class="wave-state">INSERTING</span></div><div class="br-readout"><div><span class="hud-label">ALIVE</span><strong id="aliveValue">12</strong></div><div><span class="hud-label">ELIMS</span><strong id="eliminationsValue">00</strong></div><div><span class="hud-label">RING</span><strong id="ringValue">02:30</strong></div></div><div class="score-readout"><span class="hud-label">SCORE</span><strong id="scoreValue">000000</strong></div></div>
+      <div class="hud-top"><div class="wave-readout"><span class="hud-label">MATCH STATUS</span><strong id="waveValue">DROP</strong><span id="waveState" class="wave-state">INSERTING</span></div><div class="br-readout"><div><span class="hud-label">ALIVE</span><strong id="aliveValue">12</strong></div><div><span class="hud-label">ELIMS</span><strong id="eliminationsValue">00</strong></div><div><span class="hud-label">RING</span><strong id="ringValue">02:30</strong></div></div><div id="threatReadout" class="threat-readout" data-threat-level="clear"><span class="hud-label">NEAREST CONTACT</span><strong id="threatName">NO CONTACTS</strong><span id="threatType">SCANNER CLEAR</span><div class="threat-line"><i id="threatBar"></i></div><span id="threatDistance">-- M // -- HP</span></div><div class="score-readout"><span class="hud-label">SCORE</span><strong id="scoreValue">000000</strong></div></div>
       <div id="crosshair" class="crosshair"><i></i><i></i><i></i><i></i><b></b></div>
       <div id="weaponModel" class="weapon-model" data-model="rifle" aria-label="Sentinel Rifle first person weapon model"><i class="weapon-stock"></i><i class="weapon-body"></i><i class="weapon-mag"></i><i class="weapon-barrel"></i><i class="weapon-sight"></i><i class="weapon-glow"></i></div>
        <div class="hud-bottom"><div class="vitals"><div class="health-label"><span>VITALS</span><strong id="healthValue">100</strong></div><div class="bar health-bar"><i id="healthBar"></i></div><div class="shield-label"><span>AEGIS SHIELD</span><strong id="shieldValue">00</strong></div><div class="bar shield-bar"><i id="shieldBar"></i></div><div class="status-tags"><span id="stanceValue">STANDING</span><span id="speedValue">READY</span></div></div><div class="weapon-readout"><div class="weapon-name"><span id="weaponName">SENTINEL RIFLE</span><small id="weaponType">KINETIC // PRIMARY</small></div><div class="ammo"><strong id="ammoValue">24</strong><span>/ <b id="reserveValue">120</b></span></div><div class="reload-line"><i id="reloadBar"></i></div></div></div>

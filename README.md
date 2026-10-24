@@ -39,14 +39,14 @@ cp .env.example .env
 npm start
 ```
 
-Open <http://127.0.0.1:4173/>. `PORT` can be changed in `.env` or in the shell.
+Open <http://127.0.0.1:4190/>. `PORT` can be changed in `.env` or in the shell.
 
 The GitHub Pages URL is a static solo Battle Royale build. For the WebSocket fireteam controls, use the Node server locally or deploy `server.mjs` to a WebSocket-capable host; GitHub Pages cannot run a Node process.
 
 ### Multiplayer server protocol
 
 The same server exposes a WebSocket endpoint at `/ws` (for example,
-`ws://127.0.0.1:4173/ws`). A new connection receives `welcome` and `lobby`
+`ws://127.0.0.1:4190/ws`). A new connection receives `welcome` and `lobby`
 messages. Clients can create or join rooms with `room.create` and `room.join`,
 send bounded movement updates with `input`, and use `player.ready`,
 `match.start`, and `match.end` for a small lobby-to-match lifecycle; only the
@@ -70,10 +70,10 @@ The test is offline and checks JavaScript syntax, required submission files, and
 
 ```bash
 docker build -t neon-frontier .
-docker run --rm -p 4173:4173 neon-frontier
+docker run --rm -p 4190:4190 neon-frontier
 ```
 
-Then open <http://127.0.0.1:4173/>.
+Then open <http://127.0.0.1:4190/>.
 
 ## Deploy
 

@@ -8,7 +8,7 @@ This is a real interactive 3D project, not a Unity/Unreal project file. It has n
 
 ## Current vertical slice
 
-- first-person camera with pointer lock
+- first-person camera with resilient pointer lock, focus-loss cleanup, and keyboard fallback controls
 - keyboard locomotion, sprint, crouch, jump, and collision against procedural cover
 - six original weapons with separate fire/reload/range/spread/pellet behavior and procedural first-person weapon silhouettes
 - loadout selection and attachment modifiers
@@ -18,6 +18,7 @@ This is a real interactive 3D project, not a Unity/Unreal project file. It has n
 - lobby, pause, resume, return-to-lobby, HUD, damage feedback, hit markers, loot, shields, medkits, and match results
 - local save for sensitivity, loadout, attachments, selected skin, last result, and high score
 - Character Lab roster in the loadout screen with role, motion signature, and combat stat readouts for all nine enemy variants
+- nearest-contact HUD scanner with archetype, role, distance, health, and clear/warning/critical threat states
 - optional WebSocket fireteam connection to the Node server with room state and remote avatar rendering
 
 ## Deliberate non-goals for this slice

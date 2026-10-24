@@ -467,7 +467,7 @@ export function createMultiplayerServer(options = {}) {
     tickTimer.unref?.();
     heartbeatTimer.unref?.();
     httpServer.once("error", rejectStart);
-    httpServer.listen(config.port ?? Number(process.env.PORT || 4173), config.host || "0.0.0.0", () => {
+    httpServer.listen(config.port ?? Number(process.env.PORT || 4190), config.host || "0.0.0.0", () => {
       httpServer.removeListener("error", rejectStart);
       resolveStart(httpServer.address());
     });
@@ -496,9 +496,9 @@ export function createMultiplayerServer(options = {}) {
 export const createServer = createMultiplayerServer;
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const app = createMultiplayerServer({ port: Number(process.env.PORT || 4173) });
+  const app = createMultiplayerServer({ port: Number(process.env.PORT || 4190) });
   app.start().then((address) => {
-    const displayPort = typeof address === "object" && address ? address.port : process.env.PORT || 4173;
+    const displayPort = typeof address === "object" && address ? address.port : process.env.PORT || 4190;
     console.log(`Neon Frontier listening on http://127.0.0.1:${displayPort}/`);
     console.log(`Multiplayer WebSocket ready at ${MULTIPLAYER_PATH}`);
   }).catch((error) => {

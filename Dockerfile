@@ -7,5 +7,5 @@ COPY server.mjs README.md .env.example ./
 COPY tools ./tools
 COPY neon-frontier ./neon-frontier
 
-EXPOSE 4173
+EXPOSE 4190
 CMD ["npm", "start"]
