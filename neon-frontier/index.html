@@ -38,7 +38,7 @@
               <div class="online-row"><button id="createRoomButton" class="ghost-button" disabled>CREATE ROOM</button><button id="joinRoomButton" class="ghost-button" disabled>JOIN ROOM</button><button id="readyButton" class="ghost-button" disabled>READY</button><button id="startRoomButton" class="ghost-button" disabled>START MATCH</button></div>
              <p id="onlineStatus" class="online-status">SOLO MODE // LOCAL MATCH</p>
            </div>
-           <div class="control-hint"><span>WASD</span> MOVE &nbsp; <span>SHIFT</span> SPRINT &nbsp; <span>SPACE</span> JUMP<br><span>MOUSE</span> AIM &nbsp; <span>LMB</span> FIRE &nbsp; <span>R</span> RELOAD</div>
+           <div class="control-hint"><span>WASD / ARROWS</span> MOVE &nbsp; <span>SHIFT</span> SPRINT &nbsp; <span>SPACE</span> JUMP<br><span>MOUSE</span> AIM &nbsp; <span>LMB</span> FIRE &nbsp; <span>R</span> RELOAD &nbsp; <span>1—6</span> WEAPONS</div>
         </div>
       </div>
       <p class="build-line">NO INSTALL // LOCAL PROCEDURAL GEOMETRY // BUILD 0.9.7</p>
@@ -60,7 +60,11 @@
           </div>
         </div>
         <label class="sensitivity-row">MOUSE SENSITIVITY <input id="sensitivity" type="range" min="0.5" max="2.5" step="0.05"><output id="sensitivityValue"></output></label>
-        <p class="loadout-foot">1 / 2 / 3 switch weapons &nbsp;•&nbsp; ESC pauses the simulation</p>
+        <section class="character-intel" aria-labelledby="characterIntelTitle">
+          <div class="intel-heading"><div><p class="panel-kicker">CHARACTER LAB // FIELD READOUT</p><h3 id="characterIntelTitle">HOSTILE ROSTER</h3></div><span class="intel-count">9 VARIANTS</span></div>
+          <div id="characterRoster" class="character-roster"></div>
+        </section>
+        <p class="loadout-foot">1—6 switch weapons &nbsp;•&nbsp; ESC pauses the simulation</p>
       </div>
     </section>
 
@@ -75,6 +79,7 @@
     <div id="hud" class="hud" aria-live="polite">
       <div class="hud-top"><div class="wave-readout"><span class="hud-label">MATCH STATUS</span><strong id="waveValue">DROP</strong><span id="waveState" class="wave-state">INSERTING</span></div><div class="br-readout"><div><span class="hud-label">ALIVE</span><strong id="aliveValue">12</strong></div><div><span class="hud-label">ELIMS</span><strong id="eliminationsValue">00</strong></div><div><span class="hud-label">RING</span><strong id="ringValue">02:30</strong></div></div><div class="score-readout"><span class="hud-label">SCORE</span><strong id="scoreValue">000000</strong></div></div>
       <div id="crosshair" class="crosshair"><i></i><i></i><i></i><i></i><b></b></div>
+      <div id="weaponModel" class="weapon-model" data-model="rifle" aria-label="Sentinel Rifle first person weapon model"><i class="weapon-stock"></i><i class="weapon-body"></i><i class="weapon-mag"></i><i class="weapon-barrel"></i><i class="weapon-sight"></i><i class="weapon-glow"></i></div>
        <div class="hud-bottom"><div class="vitals"><div class="health-label"><span>VITALS</span><strong id="healthValue">100</strong></div><div class="bar health-bar"><i id="healthBar"></i></div><div class="shield-label"><span>AEGIS SHIELD</span><strong id="shieldValue">00</strong></div><div class="bar shield-bar"><i id="shieldBar"></i></div><div class="status-tags"><span id="stanceValue">STANDING</span><span id="speedValue">READY</span></div></div><div class="weapon-readout"><div class="weapon-name"><span id="weaponName">SENTINEL RIFLE</span><small id="weaponType">KINETIC // PRIMARY</small></div><div class="ammo"><strong id="ammoValue">24</strong><span>/ <b id="reserveValue">120</b></span></div><div class="reload-line"><i id="reloadBar"></i></div></div></div>
       <div id="hitMarker" class="hit-marker">×</div>
       <div id="damageFlash" class="damage-flash"></div>

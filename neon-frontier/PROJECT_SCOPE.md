@@ -10,13 +10,14 @@ This is a real interactive 3D project, not a Unity/Unreal project file. It has n
 
 - first-person camera with pointer lock
 - keyboard locomotion, sprint, crouch, jump, and collision against procedural cover
-- three original weapons with separate fire/reload/range/spread/pellet behavior
+- six original weapons with separate fire/reload/range/spread/pellet behavior and procedural first-person weapon silhouettes
 - loadout selection and attachment modifiers
 - procedural arena map and tactical minimap
-- Battle Royale match with three procedural bot archetypes (Striker, Skirmisher, Bulwark), 11 rivals, loot, shields, medkits, eliminations, victory flow, and a closing safe ring
+- Battle Royale match with nine procedural bot variants, 15 rivals, loot, shields, medkits, eliminations, victory flow, and a closing safe ring
 - procedural WebAudio footsteps/voice/attack/death layers, per-bot movement/attack animation state, bounded recoil/trail/impact/death particles, attack beams, composition toasts, and archetype minimap markers
 - lobby, pause, resume, return-to-lobby, HUD, damage feedback, hit markers, loot, shields, medkits, and match results
 - local save for sensitivity, loadout, attachments, selected skin, last result, and high score
+- Character Lab roster in the loadout screen with role, motion signature, and combat stat readouts for all nine enemy variants
 - optional WebSocket fireteam connection to the Node server with room state and remote avatar rendering
 
 ## Deliberate non-goals for this slice

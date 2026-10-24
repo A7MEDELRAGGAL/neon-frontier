@@ -25,7 +25,7 @@
 ## Demo recording script
 
 1. Show the lobby and personal-best value.
-2. Open **Configure Loadout**, select all three weapons, toggle attachments, and change sensitivity.
+2. Open **Configure Loadout**, inspect all six weapons, toggle attachments, and change sensitivity.
 3. Close and reopen the loadout panel to show persistence.
 4. Start a mission and demonstrate pointer lock, movement, sprint, crouch, jump, firing, reload, and weapon switching.
 5. Eliminate bots, show score and wave progression, then pause and resume.

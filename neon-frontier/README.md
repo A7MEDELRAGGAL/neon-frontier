@@ -9,36 +9,37 @@ Open `index.html` directly in a current desktop browser. A local static server i
 ## Features
 
 - First-person WebGL rendering with pointer-lock mouse look, a procedural cover-filled map, lighting, minimap, crosshair, and HUD.
-- WASD movement, sprint (Shift), crouch (Ctrl/C), jump (Space), mouse fire, reload (R), weapon switching (1/2/3 or mouse wheel), and pause/resume.
-- Three weapons with distinct damage, fire rate, magazine, reserve, reload, spread, range, and pellet behavior.
+- WASD/arrow movement, sprint (Shift), crouch (Ctrl/C), jump (Space), mouse fire, reload (R), weapon switching (1–6 or mouse wheel), and pause/resume.
+- Six weapons with distinct damage, fire rate, magazine, reserve, reload, spread, range, pellet behavior, and procedural first-person silhouettes.
 - Reflex, Capacitor, and Stabilizer attachment toggles alter weapon behavior and persist with loadout settings.
-- Three readable procedural enemy archetypes spawn in rotating wave compositions: balanced Strikers, fast low-health Skirmishers, and slow armored Bulwarks with different silhouettes, accessories, movement, range, damage, and cooldown tuning. Veteran contacts are mixed into each escalating wave.
+- Nine readable procedural enemy variants spawn in rotating Battle Royale compositions: Strikers, Skirmishers, Bulwarks, Recon, Medic, Juggernaut, Warden, Assault, and Specter profiles with different colors, proportions, equipment silhouettes, movement, range, damage, and cooldown tuning.
 - Enemy radio cues, layered footsteps/voice/attack/death sounds, readable archetype movement/combat animations, short-lived recoil/trail/impact particles, attack beams, death bursts, wave composition toasts, and minimap colors are synthesized at runtime with WebAudio and canvas/WebGL primitives.
-- A shrinking safe ring, 11 autonomous rivals, loot pickups, shields, medkits, eliminations, victory/elimination results, and a local high-score record.
+- A shrinking safe ring, 15 autonomous rivals, loot pickups, shields, medkits, eliminations, victory/elimination results, and a local high-score record.
 - Four original cosmetic skins and persistent `localStorage` save/load for sensitivity, selected weapon, attachment choices, selected skin, last result, and high score.
+- The loadout screen includes a nine-variant Character Lab roster with role, movement signature, health, speed, and damage readouts so the player can learn each silhouette before dropping.
 - An optional local WebSocket fireteam panel when the app is run through `npm start`.
 
 ## Controls
 
 | Input | Action |
 | --- | --- |
-| WASD | Move |
+| WASD / Arrow keys | Move |
 | Shift | Sprint |
 | Ctrl / C | Crouch |
 | Space | Jump |
 | Mouse | Look |
 | Left mouse | Fire (raycast) |
 | R | Reload |
-| 1 / 2 / 3 or wheel | Switch weapon |
+| 1–6 or wheel | Switch weapon |
 | Esc | Pause and release pointer lock |
 
 ## Manual smoke test
 
 1. Open `index.html`; confirm the Neon Frontier lobby renders and the displayed high score is `000000` on a fresh profile.
-2. Open **Configure Loadout**, select each weapon, toggle each attachment, change sensitivity, close the panel, reopen it, and confirm selections persist.
+2. Open **Configure Loadout**, select each weapon, toggle each attachment, change sensitivity, review the nine-card Character Lab roster, close the panel, reopen it, and confirm selections persist.
 3. Start a mission. Confirm pointer lock, mouse look, WASD movement, sprint/crouch/jump, minimap, wave HUD, and weapon readout.
-4. Fire until a magazine empties, press `R`, switch weapons with `1/2/3`, and verify ammo/reload feedback changes.
-5. Shoot each enemy silhouette and confirm hit markers, score changes, archetype-specific weapon-ready/recoil, agile fin/trail, or heavy stomp/armor-pulse feedback, layered radio/audio cues, short-lived impact/death bursts, bot removal, and the live-player count.
+4. Fire until a magazine empties, press `R`, switch weapons with `1–6`, and verify ammo/reload feedback changes.
+5. Shoot each enemy silhouette and confirm hit markers, score changes, archetype-specific equipment silhouettes, weapon-ready/recoil, agile fin/trail, heavy stomp/armor-pulse feedback, layered radio/audio cues, short-lived impact/death bursts, bot removal, and the live-player count.
 6. Let a bot attack, confirm the damage flash and health bar, then press `Esc` and use Resume. Return to lobby and reopen the page to confirm the high score is saved.
 
 ## Verification

@@ -17,12 +17,12 @@ Neon Frontier is an original, dependency-light browser FPS vertical slice built 
 
 - WebGL first-person camera with pointer lock and mouse look.
 - WASD movement, sprint, crouch, jump, collisions, crosshair, and minimap.
-- Three original weapons with separate damage, rate, magazine, reload, spread, range, and pellet behavior.
+- Six original weapons with separate damage, rate, magazine, reload, spread, range, pellet behavior, and procedural first-person weapon silhouettes.
 - Reflex, Capacitor, and Stabilizer attachment modifiers.
 - Sentry bots with pursuit, cover checks, line-of-sight attacks, elite variants, and escalating waves.
 - Lobby, pause/resume, HUD, hit markers, damage feedback, score, and high-score persistence.
 - Local `localStorage` save for sensitivity, selected weapon, attachments, and high score.
-- Battle Royale loop: 11 rivals, loot pickups, Aegis shields, medkits, a shrinking ring, eliminations, victory/elimination result screens, and original cosmetic skins.
+- Battle Royale loop: 15 rivals across nine archetype variants, loot pickups, Aegis shields, medkits, a shrinking ring, eliminations, victory/elimination result screens, and original cosmetic skins.
 - Multiplayer foundation: a Node server keeps authoritative rooms and player movement over WebSocket; connected remote players are rendered as neon fireteam avatars.
 - Online lobby controls: connect, create/join a room, ready up, and let the room host start the synchronized match.
 
@@ -83,14 +83,14 @@ The repository includes `.github/workflows/pages.yml`, which publishes `neon-fro
 
 | Input | Action |
 | --- | --- |
-| WASD | Move |
+| WASD / Arrow keys | Move |
 | Shift | Sprint |
 | Ctrl / C | Crouch |
 | Space | Jump |
 | Mouse | Look |
 | Left mouse | Fire |
 | R | Reload |
-| 1 / 2 / 3 or mouse wheel | Switch weapon |
+| 1–6 or mouse wheel | Switch weapon |
 | Esc | Pause and release pointer lock |
 
 ## Clean-room scope
