@@ -17,7 +17,7 @@ const script = await readFile("neon-frontier/game.js", "utf8");
 if (!html.includes('id="glCanvas"') || !html.includes('src="game.js"')) {
   throw new Error("game shell is missing the WebGL canvas or script entry point");
 }
-for (const marker of ["requestPointerLock", "installReliableControls", "isFormTarget", "localStorage", "spawnBattleRoyale", "CONFIGURE LOADOUT", "weaponModel", "characterRoster", "threatReadout", "updateThreatHud", "ArrowUp", "Digit6", "RECON"]) {
+for (const marker of ["requestPointerLock", "installReliableControls", "isFormTarget", "localStorage", "spawnBattleRoyale", "CONFIGURE LOADOUT", "weaponModel", "characterRoster", "threatReadout", "updateThreatHud", "combatFeed", "addCombatEvent", "ArrowUp", "Digit6", "RECON"]) {
   if (!html.includes(marker) && !script.includes(marker)) {
     throw new Error(`expected game feature marker is missing: ${marker}`);
   }

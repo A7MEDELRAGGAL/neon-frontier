@@ -19,6 +19,7 @@ This is a real interactive 3D project, not a Unity/Unreal project file. It has n
 - local save for sensitivity, loadout, attachments, selected skin, last result, and high score
 - Character Lab roster in the loadout screen with role, motion signature, and combat stat readouts for all nine enemy variants
 - nearest-contact HUD scanner with archetype, role, distance, health, and clear/warning/critical threat states
+- Tactical Feed HUD history for mission, reload, loot, damage, and elimination events
 - optional WebSocket fireteam connection to the Node server with room state and remote avatar rendering
 
 ## Deliberate non-goals for this slice

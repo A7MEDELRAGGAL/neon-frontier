@@ -9,7 +9,7 @@
 </head>
 <body>
   <main id="game-shell">
-    <canvas id="glCanvas" tabindex="0" aria-label="Neon Frontier 3D game view"></canvas>
+    <canvas id="glCanvas" tabindex="0" aria-label="Frontier Operations 3D game view"></canvas>
     <canvas id="minimap" width="180" height="180" aria-label="Tactical minimap"></canvas>
     <div id="scanlines" aria-hidden="true"></div>
 
@@ -84,6 +84,7 @@
       <div id="hitMarker" class="hit-marker">×</div>
       <div id="damageFlash" class="damage-flash"></div>
       <div id="toast" class="toast"></div>
+      <aside id="combatFeed" class="combat-feed" aria-live="polite" aria-label="Tactical event feed"><div class="feed-heading">TACTICAL FEED</div><ol id="combatFeedItems"></ol></aside>
       <div id="aimHint" class="aim-hint">CLICK THE ARENA TO CAPTURE MOUSE</div>
       <div id="pickupLabel" class="pickup-label"></div>
     </div>
